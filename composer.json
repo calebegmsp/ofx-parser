@@ -35,5 +35,10 @@
         "psr-0": {
             "OfxParser": "lib/"
         }
+    },
+    "config": {
+        "platform": {
+            "php": ">=5.6"
+        }
     }
 }
