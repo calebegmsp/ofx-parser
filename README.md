@@ -7,6 +7,9 @@ OFX Parser is a PHP library designed to parse an OFX file downloaded from a fina
 
 It supports multiple Bank Accounts, the required "Sign On" response, and recognises OFX timestamps.
 
+## Disclaimer
+This project is a copy of [asgrim/ofxparser](https://github.com/asgrim/ofxparser). Thanks for all.
+
 ## Installation
 
 Simply require the package using [Composer](https://getcomposer.org/):
