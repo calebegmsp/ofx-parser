@@ -15,7 +15,7 @@ This project is a copy of [asgrim/ofxparser](https://github.com/asgrim/ofxparser
 Simply require the package using [Composer](https://getcomposer.org/):
 
 ```bash
-$ composer require asgrim/ofxparser
+$ composer require mminotti/ofxparser
 ```
 
 ## Usage
