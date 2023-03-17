@@ -35,6 +35,15 @@ class Utils
         if (!isset($dateString) || trim($dateString) === '') {
             return null;
         }
+
+        if ( preg_match('/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/', $dateString) ||
+                preg_match('/^[0-9]{1,2}\-[0-9]{1,2}\-[0-9]{4}$/', $dateString)
+            ) {
+            $dateString = (
+                \DateTime::createFromFormat('d-m-Y', $dateString) ?:
+                \DateTime::createFromFormat('d/m/Y', $dateString)
+            )->format('Ymd');
+        }
         
         $regex = '/'
             . "(\d{4})(\d{2})(\d{2})?"     // YYYYMMDD             1,2,3
