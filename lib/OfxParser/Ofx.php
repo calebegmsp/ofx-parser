@@ -185,7 +185,7 @@ class Ofx
         $bankAccount->accountNumber = $statementResponse->BANKACCTFROM->ACCTID;
         $bankAccount->routingNumber = $statementResponse->BANKACCTFROM->BANKID;
         $bankAccount->accountType = $statementResponse->BANKACCTFROM->ACCTTYPE;
-        $bankAccount->balance = $statementResponse->LEDGERBAL->BALAMT;
+        $bankAccount->balance = Utils::createAmountFromStr($statementResponse->LEDGERBAL->BALAMT);
         $bankAccount->balanceDate = Utils::createDateTimeFromStr(
             $statementResponse->LEDGERBAL->DTASOF,
             true
@@ -227,7 +227,7 @@ class Ofx
         $creditAccount->accountNumber = $xml->CCSTMTRS->$nodeName->ACCTID;
         $creditAccount->routingNumber = $xml->CCSTMTRS->$nodeName->BANKID;
         $creditAccount->accountType = $xml->CCSTMTRS->$nodeName->ACCTTYPE;
-        $creditAccount->balance = $xml->CCSTMTRS->LEDGERBAL->BALAMT;
+        $creditAccount->balance = Utils::createAmountFromStr($xml->CCSTMTRS->LEDGERBAL->BALAMT);
         $creditAccount->balanceDate = Utils::createDateTimeFromStr($xml->CCSTMTRS->LEDGERBAL->DTASOF, true);
 
         $creditAccount->statement = new Statement();

@@ -97,6 +97,9 @@ class Utils
      */
     public static function createAmountFromStr($amountString)
     {
+        //removes everything that is not a number, comma or decimal point from the string
+        $amountString = preg_replace('/[^0-9,.]/', '', $valor);
+
         // Decimal mark style (UK/US): 000.00 or 0,000.00
         if (preg_match('/^(-|\+)?([\d,]+)(\.?)([\d]{2})$/', $amountString) === 1) {
             return (float)preg_replace(
