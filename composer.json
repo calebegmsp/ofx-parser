@@ -1,5 +1,5 @@
 {
-    "name": "mminotti/ofxparser",
+    "name": "calebegmsp/ofxparser",
     "description": "Simple OFX file parser",
     "keywords": ["ofx", "open financial exchange", "finance", "parser"],
     "license": "MIT",
@@ -22,6 +22,10 @@
         {
             "name": "Oliver Lowe",
             "email": "mrtriangle@gmail.com"
+        },
+        {
+            "name": "Calebe Pereira",
+            "email": "calebepereira.tec@gmail.com"
         }
     ],
     "require": {
